@@ -1,8 +1,6 @@
 *.iml
 .gradle
 /local.properties
-/.idea/workspace.xml
-/.idea/libraries
 /.idea/caches
 .DS_Store
 build
@@ -16,3 +14,4 @@ signing/play-account.json
 
 # Do not commit firebase config
 google-services.json
+/.idea
