@@ -16,6 +16,7 @@
 
 package app.tivi.ui.databinding
 
+import android.util.Log
 import android.view.Gravity
 import android.view.View
 import android.widget.ImageView
@@ -43,7 +44,7 @@ import org.threeten.bp.OffsetDateTime
 @BindingAdapter("tmdbPosterPath", "tmdbImageUrlProvider")
 fun loadPoster(view: ImageView, path: String?, urlProvider: TmdbImageUrlProvider?) {
     GlideApp.with(view).clear(view)
-
+    Log.d("---","b $path")
     if (path != null && urlProvider != null) {
         view.doOnLayout {
             GlideApp.with(view)
@@ -57,7 +58,7 @@ fun loadPoster(view: ImageView, path: String?, urlProvider: TmdbImageUrlProvider
 @BindingAdapter("tmdbBackdropPath", "tmdbImageUrlProvider")
 fun loadBackdrop(view: ImageView, path: String?, urlProvider: TmdbImageUrlProvider?) {
     GlideApp.with(view).clear(view)
-
+    Log.d("---","a $path")
     if (path != null && urlProvider != null) {
         view.doOnLayout {
             GlideApp.with(view)
